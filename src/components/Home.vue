@@ -1,21 +1,11 @@
-<script setup>
-import { ref } from 'vue'
-
-defineProps({
-  msg: String
-})
-
-const count = ref(0)
-</script>
-
 <template>
   <div class="title-initial">DreamTrip</div>
 
   <div class="slogan">Create your dream trip</div>
   
-  <div class="space-1"> 
+  <router-link to="/signup">
     <button class="initial-button-sign-up">Sign up</button>
-  </div>
+  </router-link> 
   
   <div class="space-2"> 
     <button class="initial-button-log-in">Log in</button>
@@ -63,3 +53,9 @@ const count = ref(0)
   }
 
 </style>
+
+<script>
+  export default {
+    name: 'Home'
+  }
+</script>

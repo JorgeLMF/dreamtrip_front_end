@@ -1,13 +1,14 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/Initial.vue'
-</script>
-
 <template>
-
-  <HelloWorld msg="Initial" />
+<div id="app">
+  <router-view />
+</div>
 </template>
+
+<script>
+  export default {
+    name: 'App'
+  }
+</script>
 
 <style scoped>
 .logo {
@@ -22,3 +23,4 @@ import HelloWorld from './components/Initial.vue'
   filter: drop-shadow(0 0 2em #42b883aa);
 }
 </style>
+
