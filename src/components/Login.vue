@@ -1,93 +1,93 @@
-
 <template>
-
   <div class="login">
-    <div class="space-1">
+    <div>
       <div class="title-log">Login</div>
     </div>
 
-    <div class="space-2">
-      <form action="/action_page.php">
-        <input type="text" value="Email address" class="input"><br><br>
-        <input type="text" value="Password" class="input"><br><br>
+    <div>
+      <form method="get" id="form-login">
+        <input
+          type="text"
+          placeholder="Email address"
+          class="input"
+        /><br /><br />
+        <input type="text" placeholder="Password" class="input" /><br /><br />
       </form>
     </div>
-            
-    <div class="space-3">
-      <router-link to="/login">
-        <button class="initial-button-log-in">Login to your account</button>
+
+    <div>
+      <router-link to="/home">
+        <button type="submit" form="form-login" class="initial-button-log-in">
+          Login to your account
+        </button>
       </router-link>
     </div>
 
-    <div class="space-4">
-      <div>
-        Don't have an account? <router-link to="/signup" class="link">Sign up</router-link>  
-      </div>
+    <div class="login-to-signup">
+      Don't have an account?
+      <router-link to="/signup" class="link">Sign up</router-link>
     </div>
-                  
   </div>
-
-    
 </template>
-    
+
 <style scoped>
-      
-  .login{
-    background-color: #161D2F;
-    margin: auto;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    width: 120%;
-    height: 110%;
-        
-  }
+.login {
+  background-color: #161d2f;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  row-gap: 25px;
+  padding: 32px;
+  justify-content: space-between;
+}
 
-  .title-log{
-      color: #ffffff;
-      font-size: 32px;
-      text-align: left;
-      padding-left: 20px;
-      padding-top: 30px;
-  }
+#form-login {
+  padding-top: 20px;
+}
 
-  .input{
-        border: 0px;
-        background-color: #161D2F;
-        text-align: left;
-        padding-left: 20px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #5A698F;
+.title-log {
+  color: #ffffff;
+  font-size: 32px;
+  text-align: left;
+}
 
-  }
+.input {
+  border: 0px;
+  background-color: #161d2f;
+  text-align: left;
+  border-bottom: 1px solid #5a698f;
+  width: 100%;
+  padding-bottom: 13px;
+}
 
-  .initial-button-log-in{
-    background-color: #FC4747;
-    padding-left: 50px;
-    padding-right: 50px;
-    border: 0px;
-    border-radius: 10px;
-  }
-  
-  .link{
-    color:#FC4747;
-  }
+#form-login input:focus {
+  outline: none;
+}
 
-  .space-1{
-    margin-bottom: 60px;
-  }
-    
-  .space-2{
-    margin: 5px;
-  }
-      
-  .space-3{
-    margin: 5px;
-  }
+.input::placeholder {
+  color: #ffffff;
+  opacity: 0.5;
+}
 
-  .space-4{
-    margin: 5px;
-    padding-bottom: 20px;
-  }
-    
+.initial-button-log-in {
+  background-color: #fc4747;
+  padding-left: 50px;
+  padding-right: 50px;
+  border: 0px;
+  border-radius: 10px;
+  width: 336px;
+  height: 48px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.link {
+  color: #fc4747;
+}
+
+.login-to-signup {
+  font-size: 15px;
+  font-weight: 300;
+}
 </style>
