@@ -1,12 +1,14 @@
 import { createWebHashHistory, createRouter } from "vue-router";
-import Home from "./components/Home.vue";
+import Initial from "./components/Initial.vue";
 import SignUp from "./components/SignUp.vue";
 import Login from "./components/Login.vue";
+import Home from "./components/Home.vue";
 
 const routes = [
-  { path: "/", name: "home", component: Home },
+  { path: "/", name: "initial", component: Initial },
   { path: "/signup", name: "signup", component: SignUp },
   { path: "/login", name: "login", component: Login },
+  { path: "/home", name: "home", component: Home },
 ];
 
 const router = createRouter({
