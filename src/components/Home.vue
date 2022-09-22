@@ -3,13 +3,19 @@
 
   <div class="slogan">Create your dream trip</div>
   
-  <router-link to="/signup">
-    <button class="initial-button-sign-up">Sign up</button>
-  </router-link> 
-  
-  <div class="space-2"> 
-    <button class="initial-button-log-in">Log in</button>
+  <div class="space-1">
+    <router-link to="/signup">
+      <button class="initial-button-sign-up">Sign up</button>
+    </router-link> 
   </div>
+  
+  <div class="space-2">
+    <router-link to="/login">
+      <button class="initial-button-log-in">Log in</button>
+    </router-link>
+  </div>
+
+   
 
 </template>
 
