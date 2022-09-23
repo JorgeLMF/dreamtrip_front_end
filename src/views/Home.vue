@@ -7,6 +7,7 @@ import PackageCard from "../components/PackageCard.vue";
   <!-- VERTICAL NAVBAR -->
   <div class="home">
     <Navbar />
+
     <div class="filters">
       <h2 class="title1">Filters</h2>
       <div class="prices">
@@ -61,8 +62,9 @@ import PackageCard from "../components/PackageCard.vue";
                       y disfrutar plenamente de la capital rusa - visitar el 
                       Museo de la Armería y el Fondo de los Diamantes."
         precio="S/. 900"
-        lugar="Place: Cacun"
+        lugar="Place: Cancun"
         duracion="Duration: 4 days"
+        img_url="https://www.cancunadventure.net/images/puntacancun-airview.jpg"
       />
 
       <PackageCard
@@ -73,6 +75,7 @@ import PackageCard from "../components/PackageCard.vue";
         precio="S/. 1,100"
         lugar="Place: Machu Picchu"
         duracion="Duration: 5 days"
+        img_url="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Before_Machu_Picchu.jpg/640px-Before_Machu_Picchu.jpg"
       />
 
       <PackageCard
@@ -83,6 +86,7 @@ import PackageCard from "../components/PackageCard.vue";
         precio="S/. 700"
         lugar="Place: Los Cabos"
         duracion="Duration: 4 days"
+        img_url="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/loscabosmx/Arco_I9A0109_V2_0bb6b65a-6293-4918-a9dd-6e82822e1299.jpg"
       />
     </div>
   </div>
@@ -120,16 +124,18 @@ import PackageCard from "../components/PackageCard.vue";
   height: 74px;
   display: flex;
   flex-direction: row;
-  gap: 49px;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .content-filter-title {
-  font-family: "Outfit";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: #ffffff;
+  display: block;
 }
 
 .option-button {
@@ -139,11 +145,12 @@ import PackageCard from "../components/PackageCard.vue";
   background: #fc4747;
   border-radius: 9px;
   border: 0px;
-  font-family: "Outfit";
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
   line-height: 18px;
+  display: block;
+  margin-right: 10px;
 }
 
 .title1 {

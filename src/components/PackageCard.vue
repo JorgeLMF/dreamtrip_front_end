@@ -4,22 +4,27 @@ defineProps({
   descripcion: String,
   lugar: String,
   duracion: String,
-  desde: String,
   precio: String,
+  img_url: String,
 });
 </script>
 <template>
   <div class="package-card">
-    <div class="descrition-package">
+    <div class="">
+      <img class="card-image" :src="img_url" alt="travel" />
+    </div>
+
+    <div class="card-description">
       <div>{{ nombre }}</div>
-      <div class="descrition">{{ descripcion }}</div>
+      <div>{{ descripcion }}</div>
       <div>{{ lugar }}</div>
       <div>{{ duracion }}</div>
     </div>
 
-    <div>
-      <div>Since: {{ desde }}</div>
-      <div>{{ precio }}</div>
+    <div class="card-action">
+      <div>Since:</div>
+      <div class="card-price">{{ precio }}</div>
+      <button class="card-button">See Details</button>
     </div>
   </div>
 </template>
@@ -32,20 +37,39 @@ defineProps({
   height: 180px;
   display: flex;
   flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
 }
 
-.descrition-package {
+.card-description {
+  padding: 10px;
+  text-align: left;
+}
+
+.card-action {
+  width: 500px;
   display: flex;
   flex-direction: column;
-  position: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 24px;
 }
 
-.descrition {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
+.card-price {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.card-image {
+  height: 100%;
+  border-radius: 5px;
+  width: 150px;
+  object-fit: cover;
+}
+
+.card-button {
   font-size: 14px;
-  line-height: 17px;
-  text-align: left;
+  font-weight: 500;
 }
 </style>
