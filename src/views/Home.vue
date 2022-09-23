@@ -51,7 +51,10 @@ import PackageCard from "../components/PackageCard.vue";
     </div>
 
     <div class="content">
-      <div class="content-filter">Sort by</div>
+      <div class="content-filter">
+        <p class="content-filter-title">Sort by</p>
+        <button class="option-button">Choose an option:</button>
+      </div>
       <PackageCard
         nombre="Aventura Natural"
         descripcion=" Por qué no pasar una o dos noches extras en Moscú 
@@ -115,6 +118,32 @@ import PackageCard from "../components/PackageCard.vue";
   background-color: #161d2f;
   width: 100%;
   height: 74px;
+  display: flex;
+  flex-direction: row;
+  gap: 49px;
+}
+
+.content-filter-title {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.option-button {
+  box-sizing: border-box;
+  width: 178px;
+  height: 34px;
+  background: #fc4747;
+  border-radius: 9px;
+  border: 0px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .title1 {
