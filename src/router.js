@@ -1,8 +1,8 @@
 import { createWebHashHistory, createRouter } from "vue-router";
-import Initial from "./components/Initial.vue";
-import SignUp from "./components/SignUp.vue";
-import Login from "./components/Login.vue";
-import Home from "./components/Home.vue";
+import Initial from "./views/Initial.vue";
+import SignUp from "./views/SignUp.vue";
+import Login from "./views/Login.vue";
+import Home from "./views/Home.vue";
 
 const routes = [
   { path: "/", name: "initial", component: Initial },
