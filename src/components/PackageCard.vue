@@ -15,10 +15,12 @@ defineProps({
     </div>
 
     <div class="card-description">
-      <div>{{ nombre }}</div>
-      <div>{{ descripcion }}</div>
-      <div>{{ lugar }}</div>
-      <div>{{ duracion }}</div>
+      <div class="title-pack">{{ nombre }}</div>
+      <div class="des-pack">{{ descripcion }}</div>
+      <div class="pl-du">
+        <div>{{ lugar }}</div>
+        <div>{{ duracion }}</div>
+      </div>
     </div>
 
     <div class="card-action">
@@ -46,6 +48,26 @@ defineProps({
   text-align: left;
 }
 
+.title-pack {
+  color: #ffffff;
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.des-pack {
+  color: #ffffff;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+.pl-du {
+  color: #ffffff;
+  font-size: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
 .card-action {
   width: 500px;
   display: flex;
@@ -54,6 +76,7 @@ defineProps({
   justify-content: center;
   gap: 10px;
   font-size: 24px;
+  color: #ffffff;
 }
 
 .card-price {

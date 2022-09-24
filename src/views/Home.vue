@@ -12,10 +12,20 @@ import PackageCard from "../components/PackageCard.vue";
       <h2 class="title1">Filters</h2>
       <div class="prices">
         <h3 class="title2">Price</h3>
+        <input type="range" min="300" max="10000" class="price-range" />
+        <div class="pric-ran">
+          <div>min</div>
+          <div>max</div>
+        </div>
       </div>
 
       <div class="conftime">
         <h3 class="title2">Configuration Time</h3>
+        <input type="range" min="0" max="24" class="time-range" />
+        <div class="tim-ran">
+          <div>immediate</div>
+          <div>24h</div>
+        </div>
       </div>
 
       <div class="type">
@@ -161,6 +171,36 @@ import PackageCard from "../components/PackageCard.vue";
   border-bottom: 2px solid #fc4747;
   text-align: left;
   color: #ffffff;
+}
+
+.price-range {
+  height: 1px;
+  margin: 10px 0;
+  width: 80%;
+}
+
+.time-range {
+  height: 1px;
+  margin: 10px 0;
+  width: 80%;
+}
+
+.pric-ran {
+  font-size: 12px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  gap: 170px;
+  padding-left: 15px;
+}
+
+.tim-ran {
+  font-size: 12px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  gap: 150px;
+  padding-left: 2px;
 }
 
 .forms {
