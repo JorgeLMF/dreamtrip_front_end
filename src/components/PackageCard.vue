@@ -58,6 +58,7 @@ defineProps({
   color: #ffffff;
   font-size: 12px;
   padding-bottom: 10px;
+  font-weight: lighter;
 }
 
 .pl-du {
